@@ -73,6 +73,11 @@ public class MyLinkedList {
         }
     }
 
+    public void insertAfterParticular(INode previousNode, INode newNode) {
+        INode tempNode = previousNode.getNext();
+        previousNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My LinkedList Nodes : ");
         INode tempNode = head;
