@@ -1,14 +1,15 @@
 public class LinkedList {
-    public static void main (){
-        MyNode<Integer> myFirstNode = new MyNode<>(56);
+    public static void main(String[] args) {
+        MyNode<Integer> myFirstNode = new MyNode<>(70);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(70);
-        myFirstNode.setNext(mySecondNode);
-        mySecondNode.setNext(myThirdNode);
-        myThirdNode.setNext(null);
+        MyNode<Integer> myThirdNode = new MyNode<>(56);
 
-        if (myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode)){
-            System.out.println("Condition is " +true);
-        }else System.out.println("Condition is " +false);
+        MyLinkedList object = new MyLinkedList();
+        object.addToFront(myFirstNode);
+        object.addToFront(mySecondNode);
+        object.addToFront(myThirdNode);
+
+        object.printMyNodes();
+
     }
 }
