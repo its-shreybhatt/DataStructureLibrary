@@ -34,6 +34,17 @@ public class MyLinkedList {
             this.tail = newNode;
         }
     }
+
+    public void insertMethodFirst(INode newNode) {
+        INode tempNode = this.head.getNext();
+        this.head.setNext(newNode);
+        newNode.setNext(tail);
+    }
+    public void insertMethodSecond(INode firstNode , INode nextNode) {
+        INode tempNode = firstNode.getNext();
+        firstNode.setNext(nextNode);
+        nextNode.setNext(tempNode);
+    }
     public  void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My LinkedList Nodes : ");
         INode tempNode = head;
