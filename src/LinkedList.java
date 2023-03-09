@@ -6,14 +6,12 @@ public class LinkedList {
 
         MyLinkedList object = new MyLinkedList();
         object.addToFront(myFirstNode);
-        object.appendToLast(mySecondNode);
-        object.appendToLast(myThirdNode);
+        object.appendSort(myFirstNode,mySecondNode);
+        object.appendSort(mySecondNode,myThirdNode);
 
         MyNode<Integer> mynewNode = new MyNode<>(40);
         object.insertAfterParticular(mySecondNode,mynewNode);
-        //   56-> 30-> 40-> 70
-        object.deleteAfterParticular(mySecondNode,mynewNode);
-        //   56-> 30-> 70
+
 
         object.printMyNodes();
 
