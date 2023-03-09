@@ -11,6 +11,9 @@ public class LinkedList {
 
         MyNode<Integer> mynewNode = new MyNode<>(40);
         object.insertAfterParticular(mySecondNode,mynewNode);
+        //   56-> 30-> 40-> 70
+        object.deleteAfterParticular(mySecondNode,mynewNode);
+        //   56-> 30-> 70
 
         object.printMyNodes();
 
